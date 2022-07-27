@@ -1,0 +1,56 @@
+.container{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: auto;               
+}
+.container div{
+    
+    text-align: right;
+    text-align-last: center;
+}
+#title{
+    grid-column: 1/ span 12; 
+    text-align: center;               
+}
+#menu{
+    grid-column: 1/ span 12;
+    text-align: center;
+}
+.panel{
+    width: 60px;
+    height: 30px;
+    font-size: 25px;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 5px;
+}
+#add{
+    background-color: green;
+}
+#delete{
+    background-color: rgb(202, 26, 26);
+}
+.panel:active{
+    transform: translateY(3px);
+    box-shadow: 1px 1px 10px black;
+}
+textarea{
+    resize:none;
+    width: 95%;
+    background-color:aliceblue;
+}
+.del-itself{
+    transform: translateY(10px);
+    background-color: rgb(202, 26, 26);
+    border-radius: 4px;
+    animation-name: del;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;                
+}
+@keyframes del {
+    0%   {transform: translateY(10px);}
+    25%  {transform: translateY(5px);}
+    50%  {transform: rotateZ(10deg);}
+    75%  {transform: rotateZ(0deg);}
+    100% {transform: rotateZ(-10deg);}
+}
