@@ -39,6 +39,7 @@ textarea{
     background-color:aliceblue;
 }
 .del-itself{
+    visibility: hidden;
     transform: translateY(10px);
     background-color: rgb(202, 26, 26);
     border-radius: 4px;
