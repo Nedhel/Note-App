@@ -29,6 +29,18 @@
 #delete{
     background-color: rgb(202, 26, 26);
 }
+#save{
+    width: 120px;
+    height: 35px;
+    font-size: 15px;
+    box-shadow: 3px 3px 10px black;
+    border-radius: 5px;
+    background-color: rgb(110, 230, 172);
+}
+#save:active{
+    transform: translateY(3px);
+    box-shadow: 1px 1px 10px black;
+}
 .panel:active{
     transform: translateY(3px);
     box-shadow: 1px 1px 10px black;
