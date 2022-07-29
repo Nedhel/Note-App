@@ -1,8 +1,6 @@
 function initial() {
-    const strJsonNotes =
-        '[{"id":"1","text":"Nueva nota de texto, nota 1"},{"id":"2","text":"Nota 2 solo para prueba"}]';
-    if (strJsonNotes != "") {
-        const arrayNotes = JSON.parse(strJsonNotes);
+    if (localStorage.getItem("notes")) {
+        const arrayNotes = JSON.parse(localStorage.getItem("notes"));
         for (const iterator of arrayNotes) {
             let newDiv = document.createElement("div");
             let newButton = document.createElement("button");
@@ -79,6 +77,7 @@ function save() {
         jump++;
     }
     const fileJson = JSON.stringify(jsonArray);
+    localStorage.setItem("notes", fileJson);
     console.log(fileJson);
 }
 window.addEventListener("load", () => {
